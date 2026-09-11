@@ -83,7 +83,7 @@ export const projects: PrototypeProject[] = [
       "Distribución enfocada en la simplicidad, una identidad propia y builds reproducibles, con scripts de configuración, editores y herramientas preinstaladas.",
     stack: ["Arch Linux", "Shell", "Rust"],
     monogram: "XL",
-    href: "https://xlnux.github.io/x-repo/",
+    href: "https://xlnux.github.io/web/es/",
     external: true,
     status: "live",
     translations: {
