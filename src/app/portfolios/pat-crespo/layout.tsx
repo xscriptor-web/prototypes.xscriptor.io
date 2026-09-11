@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Header from "@/components/pat-crespo/Header"
 import Footer from "@/components/pat-crespo/Footer"
 import PageTransition from "@/components/pat-crespo/PageTransition"
+import { PatLocaleProvider } from "@/components/pat-crespo/LocaleProvider"
+import { getSiteInfo } from "@/lib/pat-crespo/posts"
 
 export const metadata: Metadata = {
   title: {
@@ -37,13 +39,17 @@ export default function LiteratureLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { navLinks } = getSiteInfo()
+
   return (
-    <div className="pat-crespo-root min-h-screen flex flex-col">
-      <Header />
-      <main id="main-content" className="flex-1">
-        <PageTransition>{children}</PageTransition>
-      </main>
-      <Footer />
-    </div>
+    <PatLocaleProvider>
+      <div className="pat-crespo-root min-h-screen flex flex-col">
+        <Header />
+        <main id="main-content" className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
+        <Footer navLinks={navLinks} />
+      </div>
+    </PatLocaleProvider>
   )
 }

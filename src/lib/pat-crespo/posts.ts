@@ -1,4 +1,5 @@
 import type { Post, SiteInfo } from "./types"
+import type { Locale } from "./i18n"
 import rawData from "./posts.json"
 
 interface SiteData {
@@ -24,9 +25,19 @@ export function getFeaturedPost(): Post | undefined {
   return data.posts[0]
 }
 
-export function formatDate(dateString: string): string {
+export function localizePost(post: Post, locale: Locale): Post {
+  if (locale === "es") return post
+  return {
+    ...post,
+    title: post.titleVa ?? post.title,
+    body: post.bodyVa ?? post.body,
+    tags: post.tagsVa ?? post.tags,
+  }
+}
+
+export function formatDate(dateString: string, locale: Locale = "es"): string {
   const date = new Date(dateString)
-  return date.toLocaleDateString("es-ES", {
+  return date.toLocaleDateString(locale === "va" ? "ca-ES" : "es-ES", {
     year: "numeric",
     month: "long",
     day: "numeric",

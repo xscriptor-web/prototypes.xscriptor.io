@@ -6,6 +6,9 @@ export interface Post {
   tags: string[]
   images: string[]
   featuredImage: string | null
+  titleVa?: string
+  bodyVa?: string
+  tagsVa?: string[]
 }
 
 export interface SiteInfo {

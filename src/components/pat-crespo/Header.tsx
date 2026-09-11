@@ -4,18 +4,56 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { isActivePath, patCrespo } from "@/lib/pat-crespo/routes"
+import { patCopy } from "@/lib/pat-crespo/i18n"
+import { usePatLocale } from "./LocaleProvider"
+
+export function LocaleToggle() {
+  const { locale, setLocale } = usePatLocale()
+  const copy = patCopy[locale]
+
+  const options = [
+    { id: "es" as const, label: "ES" },
+    { id: "va" as const, label: "VAL" },
+  ]
+
+  return (
+    <div
+      className="flex items-center rounded-full border border-primary/15 overflow-hidden"
+      role="group"
+      aria-label={copy.header.languageLabel}
+    >
+      {options.map((option) => (
+        <button
+          key={option.id}
+          type="button"
+          onClick={() => setLocale(option.id)}
+          aria-pressed={locale === option.id}
+          className={`px-2.5 py-1 font-body text-xs leading-none transition-colors duration-200 ${
+            locale === option.id
+              ? "bg-primary text-white"
+              : "text-text-muted hover:text-primary"
+          }`}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  )
+}
 
 export default function Header() {
   const pathname = usePathname()
+  const { locale } = usePatLocale()
+  const copy = patCopy[locale]
   const [isOpen, setIsOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
 
   const navLinks = [
-    { href: "", label: "Inicio" },
-    { href: "/obras", label: "Obras" },
-    { href: "/blog", label: "Blog" },
-    { href: "/bio", label: "Bio" },
-    { href: "/contacto", label: "Contacto" },
+    { href: "", label: copy.header.nav.home },
+    { href: "/obras", label: copy.header.nav.obras },
+    { href: "/blog", label: copy.header.nav.blog },
+    { href: "/bio", label: copy.header.nav.bio },
+    { href: "/contacto", label: copy.header.nav.contacto },
   ]
 
   useEffect(() => {
@@ -66,6 +104,8 @@ export default function Header() {
                 </Link>
               )
             })}
+            <span className="w-px h-4 bg-primary/15" aria-hidden="true" />
+            <LocaleToggle />
           </nav>
 
           <button
@@ -73,7 +113,7 @@ export default function Header() {
             onClick={() => setIsOpen((open) => !open)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-label={isOpen ? copy.header.menuClose : copy.header.menuOpen}
             className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-primary hover:bg-primary/5 transition-colors duration-200"
           >
             <span className="relative block w-5 h-4">
@@ -103,7 +143,7 @@ export default function Header() {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="px-4 sm:px-6 py-4 flex flex-col" aria-label="Menú principal">
+        <nav className="px-4 sm:px-6 py-4 flex flex-col" aria-label={copy.header.mainMenu}>
           {navLinks.map((link) => {
             const target = patCrespo(link.href)
             const isActive = isActivePath(pathname, target)
@@ -123,6 +163,10 @@ export default function Header() {
               </Link>
             )
           })}
+          <div className="flex items-center justify-between pt-3 mt-2 border-t border-primary/10">
+            <span className="font-body text-sm text-text-muted">{copy.header.languageLabel}</span>
+            <LocaleToggle />
+          </div>
         </nav>
       </div>
     </header>

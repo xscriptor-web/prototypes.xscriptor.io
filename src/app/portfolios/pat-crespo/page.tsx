@@ -2,15 +2,19 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
-import { getAllPosts, getExcerpt, formatDate } from "@/lib/pat-crespo/posts"
+import { getAllPosts, getExcerpt, formatDate, localizePost } from "@/lib/pat-crespo/posts"
 import { patCrespo } from "@/lib/pat-crespo/routes"
+import { patCopy } from "@/lib/pat-crespo/i18n"
 import PostCard from "@/components/pat-crespo/PostCard"
 import PoetryRotator from "@/components/pat-crespo/PoetryRotator"
 import BooksSection from "@/components/pat-crespo/BooksSection"
+import { usePatLocale } from "@/components/pat-crespo/LocaleProvider"
 
 export default function HomePage() {
   const posts = getAllPosts()
-  const featured = posts[0]
+  const { locale } = usePatLocale()
+  const copy = patCopy[locale]
+  const featured = posts[0] ? localizePost(posts[0], locale) : undefined
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,18 +37,18 @@ export default function HomePage() {
       <section className="border-b border-primary/10 bg-gradient-to-b from-primary/[0.02] to-transparent">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
           <h1 className="font-accent text-5xl sm:text-6xl md:text-7xl text-accent leading-tight">
-            De poéticas
+            {copy.home.title}
           </h1>
           <div className="w-12 h-px bg-wood-medium mx-auto mt-6" />
           <p className="font-body text-lg text-text-muted mt-6 max-w-xl mx-auto leading-relaxed">
-            Poesía, literatura y crítica literaria desde Valencia
+            {copy.home.subtitle}
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <Link
               href={patCrespo("/blog")}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200 font-body text-sm"
             >
-              Blog
+              {copy.home.blogCta}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -53,7 +57,7 @@ export default function HomePage() {
               href={patCrespo("/bio")}
               className="inline-flex items-center gap-2 px-6 py-3 border border-primary/30 text-primary rounded-lg hover:bg-primary/5 transition-colors duration-200 font-body text-sm"
             >
-              Biografía
+              {copy.home.bioCta}
             </Link>
           </div>
         </div>
@@ -71,7 +75,7 @@ export default function HomePage() {
       {featured && (
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="mb-8">
-            <h2 className="font-display text-2xl sm:text-3xl text-primary">Última publicación</h2>
+            <h2 className="font-display text-2xl sm:text-3xl text-primary">{copy.home.latest}</h2>
             <div className="w-12 h-px bg-wood-medium mt-2" />
           </div>
 
@@ -88,7 +92,7 @@ export default function HomePage() {
               )}
               <div className="flex flex-col justify-center">
                 <time className="font-body text-xs text-text-muted/60 uppercase tracking-wider">
-                  {formatDate(featured.date)}
+                  {formatDate(featured.date, locale)}
                 </time>
                 <h3 className="font-display text-xl sm:text-2xl text-primary mt-2 mb-3 group-hover:text-accent transition-colors duration-200">
                   {featured.title}
@@ -97,7 +101,7 @@ export default function HomePage() {
                   {getExcerpt(featured.body, 200)}
                 </p>
                 <span className="inline-flex items-center gap-1 font-body text-sm text-accent mt-4 group-hover:gap-2 transition-all">
-                  Leer más
+                  {copy.home.readMore}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -111,7 +115,7 @@ export default function HomePage() {
       {/* Recent Posts */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
         <div className="mb-8">
-          <h2 className="font-display text-2xl sm:text-3xl text-primary">Publicaciones recientes</h2>
+          <h2 className="font-display text-2xl sm:text-3xl text-primary">{copy.home.recent}</h2>
           <div className="w-12 h-px bg-wood-medium mt-2" />
         </div>
 
@@ -127,9 +131,9 @@ export default function HomePage() {
               href={patCrespo("/blog")}
               className="inline-flex items-center gap-2 px-6 py-3 border border-primary/30 text-primary rounded-lg hover:bg-primary/5 transition-colors duration-200 font-body text-sm"
             >
-              Ver todas las publicaciones
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              {copy.home.allPosts}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
