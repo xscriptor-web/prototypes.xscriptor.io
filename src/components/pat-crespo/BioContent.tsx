@@ -42,7 +42,7 @@ export default function BioContent() {
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-start mb-8">
         <div className="w-full sm:w-56 shrink-0 rounded-2xl overflow-hidden shadow-md bg-primary/5">
           <img
-            src="/images/pat-crespo/patricia-crespo-alcala.webp"
+            src="/images/pat-crespo/patricia-crespo-alcala-2026.webp"
             alt="Patricia Crespo Alcalá"
             className="w-full h-auto object-cover"
           />
