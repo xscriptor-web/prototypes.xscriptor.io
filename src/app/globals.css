@@ -7,6 +7,7 @@
 /* ------------------------------------------------------------------ */
 
 :root {
+  color-scheme: light;
   --hub-paper: #f2eee6;
   --hub-paper-deep: #e9e3d8;
   --hub-ink: #17130e;
@@ -14,6 +15,17 @@
   --hub-line: rgba(23, 19, 14, 0.14);
   --hub-accent: #e2451f;
   --hub-accent-soft: rgba(226, 69, 31, 0.12);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --hub-paper: #131110;
+  --hub-paper-deep: #1c1917;
+  --hub-ink: #f4efe6;
+  --hub-ink-soft: #a49b8d;
+  --hub-line: rgba(244, 239, 230, 0.14);
+  --hub-accent: #ff6b3d;
+  --hub-accent-soft: rgba(255, 107, 61, 0.16);
 }
 
 html {

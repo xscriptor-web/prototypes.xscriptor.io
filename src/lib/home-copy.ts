@@ -65,7 +65,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "Sobre la colección",
       first:
-        "El índice reúne dos tipos de trabajo. Por un lado, reconstrucciones de sitios reales, como el portfolio literario de Patricia Crespo. Por otro, herramientas propias de código abierto: los temas de Xscriptor Colors, la distribución X Linux y las utilidades de terminal xfetch y xtop.",
+        "El índice reúne dos tipos de trabajo. Por un lado, sitios personales y literarios: reconstrucciones de portfolios reales y proyectos propios. Por otro, herramientas de código abierto: temas, distribuciones y utilidades de terminal.",
       second:
         "Cada pieza es un ejercicio de diseño e ingeniería: explorar decisiones visuales, arquitectura de componentes y rendimiento, y mantener un historial público de trabajo en front-end.",
     },
@@ -105,7 +105,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "About the collection",
       first:
-        "The index brings together two kinds of work: rebuilds of real sites, such as Patricia Crespo's literary portfolio, and open-source tools of my own, such as the Xscriptor Colors themes, the X Linux distribution and the xfetch and xtop terminal utilities.",
+        "The index brings together two kinds of work: personal and literary sites, from rebuilds of real portfolios to original projects, and open-source tools: themes, distributions and terminal utilities.",
       second:
         "Each piece is a design and engineering exercise: exploring visual decisions, component architecture and performance, and keeping a public record of front-end work.",
     },

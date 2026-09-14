@@ -9,8 +9,10 @@ interface ProjectTileProps {
 export default function ProjectTile({ project }: ProjectTileProps) {
   if (project.status !== "live" || !project.href) return null;
 
-  return (
-    <Link href={project.href} className={styles.card}>
+  const isExternal = project.external ?? /^https?:\/\//.test(project.href);
+
+  const content = (
+    <>
       <div className={styles.cardCover} aria-hidden="true">
         <span className={styles.cardIndex}>{project.index}</span>
         <span className={styles.cardMonogram}>{project.monogram}</span>
@@ -28,12 +30,32 @@ export default function ProjectTile({ project }: ProjectTileProps) {
           ))}
         </div>
         <span className={styles.cardCta}>
-          Ver prototipo
+          {isExternal ? "Visitar sitio" : "Ver prototipo"}
           <span className={styles.cardArrow} aria-hidden="true">
-            →
+            {isExternal ? "↗" : "→"}
           </span>
         </span>
       </div>
+    </>
+  );
+
+  if (isExternal) {
+    return (
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.card}
+      >
+        {content}
+        <span className="sr-only">(abre en una nueva pestaña)</span>
+      </a>
+    );
+  }
+
+  return (
+    <Link href={project.href} className={styles.card}>
+      {content}
     </Link>
   );
 }

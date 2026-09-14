@@ -29,9 +29,9 @@ export default function PortfoliosPage() {
         </div>
         <div className={styles.heroAside}>
           <p className={styles.lede}>
-            Sitios de autores, artistas y profesionales reconstruidos desde cero:
-            misma esencia y mismo contenido, con una nueva arquitectura de
-            front-end y una dirección de arte propia.
+            Sitios de autores, artistas y profesionales: reconstrucciones desde
+            cero de sitios reales y proyectos propios, con una nueva arquitectura
+            de front-end y una dirección de arte cuidada.
           </p>
         </div>
       </section>

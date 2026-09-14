@@ -142,12 +142,35 @@ export const projects: PrototypeProject[] = [
       },
     },
   },
+  {
+    id: "xscriptor",
+    index: "006",
+    title: "Xscriptor",
+    author: "Portafolio literario, blog y galería",
+    category: "Sitio personal",
+    kind: "literatura",
+    description:
+      "Sitio personal de Xscriptor en varios idiomas: portafolio literario, blog, galería de arte y lector de obra, con newsletter y formulario de contacto.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    monogram: "X",
+    href: "https://xscriptor.com",
+    external: true,
+    status: "live",
+    translations: {
+      en: {
+        author: "Literary portfolio, blog and gallery",
+        category: "Personal site",
+        description:
+          "Xscriptor's personal site in several languages: literary portfolio, blog, art gallery and book reader, with a newsletter and contact form.",
+      },
+    },
+  },
 ];
 
 export const soonProjects: PrototypeProject[] = [
   {
     id: "next",
-    index: "006",
+    index: "007",
     title: "",
     author: "",
     category: "",

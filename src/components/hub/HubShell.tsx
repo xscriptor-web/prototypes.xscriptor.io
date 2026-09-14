@@ -1,4 +1,6 @@
 import Link from "next/link";
+import GridBackground from "./GridBackground";
+import ThemeToggle from "./ThemeToggle";
 import styles from "@/app/hub.module.css";
 
 export default function HubShell({ children }: { children: React.ReactNode }) {
@@ -6,6 +8,7 @@ export default function HubShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={styles.page}>
+      <GridBackground />
       <header className={styles.topbar}>
         <div className={styles.topbarInner}>
           <Link href="/" className={styles.brand}>
@@ -26,6 +29,7 @@ export default function HubShell({ children }: { children: React.ReactNode }) {
             >
               xscriptor.io ↗
             </a>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -46,6 +50,15 @@ export default function HubShell({ children }: { children: React.ReactNode }) {
               rel="noopener noreferrer"
             >
               xscriptor.io ↗
+            </a>{" "}
+            ·{" "}
+            <a
+              className={styles.footerLink}
+              href="https://github.com/xscriptor-web"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
             </a>
           </span>
         </div>
