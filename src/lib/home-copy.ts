@@ -16,6 +16,7 @@ export interface HomeCopy {
     all: string;
     literatura: string;
     tech: string;
+    ai: string;
     publishedSingular: string;
     publishedPlural: string;
     soonSuffix: string;
@@ -54,6 +55,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
       all: "Todos",
       literatura: "Literatura",
       tech: "Tech",
+      ai: "AI",
       publishedSingular: "publicado",
       publishedPlural: "publicados",
       soonSuffix: "en preparación",
@@ -65,7 +67,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "Sobre la colección",
       first:
-        "El índice reúne dos tipos de trabajo. Por un lado, sitios personales y literarios: reconstrucciones de portfolios reales y proyectos propios. Por otro, herramientas de código abierto: temas, distribuciones y utilidades de terminal.",
+        "El índice reúne tres tipos de trabajo. Por un lado, sitios personales y literarios: reconstrucciones de portfolios reales y proyectos propios. Por otro, herramientas de código abierto: temas, distribuciones, utilidades de terminal y agentes de IA.",
       second:
         "Cada pieza es un ejercicio de diseño e ingeniería: explorar decisiones visuales, arquitectura de componentes y rendimiento, y mantener un historial público de trabajo en front-end.",
     },
@@ -94,6 +96,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
       all: "All",
       literatura: "Literature",
       tech: "Tech",
+      ai: "AI",
       publishedSingular: "published",
       publishedPlural: "published",
       soonSuffix: "in progress",
@@ -105,7 +108,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "About the collection",
       first:
-        "The index brings together two kinds of work: personal and literary sites, from rebuilds of real portfolios to original projects, and open-source tools: themes, distributions and terminal utilities.",
+        "The index brings together three kinds of work: personal and literary sites, from rebuilds of real portfolios to original projects, and open-source tools: themes, distributions, terminal utilities and AI agents.",
       second:
         "Each piece is a design and engineering exercise: exploring visual decisions, component architecture and performance, and keeping a public record of front-end work.",
     },

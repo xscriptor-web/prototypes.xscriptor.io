@@ -1,5 +1,5 @@
 export type ProjectStatus = "live" | "soon";
-export type ProjectKind = "tech" | "literatura";
+export type ProjectKind = "tech" | "literatura" | "ai";
 export type ProjectLocale = "es" | "en";
 
 export interface ProjectTranslation {
@@ -165,12 +165,35 @@ export const projects: PrototypeProject[] = [
       },
     },
   },
+  {
+    id: "xscriptor-ai",
+    index: "007",
+    title: "xscriptor-ai",
+    author: "Agentes y skills para asistentes de código",
+    category: "Agentes IA",
+    kind: "ai",
+    description:
+      "Catálogo de agentes, skills y comandos para OpenCode y Claude Code: más de 200 agentes especializados en seguridad, cloud, web, datos y sistemas, instalables con un solo comando.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Markdown"],
+    monogram: "XA",
+    href: "https://xscriptor-ai.github.io/web/",
+    external: true,
+    status: "live",
+    translations: {
+      en: {
+        author: "Agents and skills for coding assistants",
+        category: "AI agents",
+        description:
+          "A catalog of agents, skills and commands for OpenCode and Claude Code: over 200 specialized agents covering security, cloud, web, data and systems, installable with a single command.",
+      },
+    },
+  },
 ];
 
 export const soonProjects: PrototypeProject[] = [
   {
     id: "next",
-    index: "007",
+    index: "008",
     title: "",
     author: "",
     category: "",

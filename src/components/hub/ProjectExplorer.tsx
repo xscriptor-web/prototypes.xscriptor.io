@@ -27,6 +27,7 @@ export default function ProjectExplorer({
     { id: "all", label: copy.all },
     { id: "literatura", label: copy.literatura },
     { id: "tech", label: copy.tech },
+    { id: "ai", label: copy.ai },
   ];
 
   const liveProjects = projects
