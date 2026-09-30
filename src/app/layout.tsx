@@ -94,6 +94,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      suppressHydrationWarning
       className={`${playfair.variable} ${lora.variable} ${caveat.variable} ${manrope.variable} ${jetbrains.variable}`}
     >
       <body>

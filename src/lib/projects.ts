@@ -1,5 +1,5 @@
 export type ProjectStatus = "live" | "soon";
-export type ProjectKind = "tech" | "literatura";
+export type ProjectKind = "tech" | "literatura" | "psicologia";
 export type ProjectLocale = "es" | "en";
 
 export interface ProjectTranslation {
@@ -45,6 +45,28 @@ export const projects: PrototypeProject[] = [
         category: "Literary portfolio",
         description:
           "Redesign of the personal site of the Valencian poet and literary critic: poetry journal, published works, media collaborations and contact.",
+      },
+    },
+  },
+  {
+    id: "carolina",
+    index: "006",
+    title: "Poesía y Psicología",
+    author: "Carolina Massa",
+    category: "Portafolio literario",
+    kind: "psicologia",
+    description:
+      "Rediseño del portafolio literario de Carolina Massa: reflexiones poéticas y psicológicas, blog con artículos de psicología y escritura creativa, obras publicadas y contacto.",
+    stack: ["Next.js", "Tailwind CSS", "TypeScript", "Static export"],
+    monogram: "CM",
+    href: "/carolina",
+    status: "live",
+    translations: {
+      en: {
+        author: "Carolina Massa",
+        category: "Literary portfolio",
+        description:
+          "Redesign of Carolina Massa's literary portfolio: poetic and psychological reflections, a blog with psychology and creative writing articles, published works and contact.",
       },
     },
   },
@@ -147,7 +169,7 @@ export const projects: PrototypeProject[] = [
 export const soonProjects: PrototypeProject[] = [
   {
     id: "next",
-    index: "006",
+    index: "007",
     title: "",
     author: "",
     category: "",

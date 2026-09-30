@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 
 export default function PortfoliosPage() {
   const liveProjects = projects.filter(
-    (project) => project.status === "live" && project.kind === "literatura"
+    (project) =>
+      project.status === "live" &&
+      (project.kind === "literatura" || project.kind === "psicologia")
   );
 
   return (

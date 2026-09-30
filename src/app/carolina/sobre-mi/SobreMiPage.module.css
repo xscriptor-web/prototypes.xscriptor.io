@@ -1,0 +1,225 @@
+.page {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: clip;
+}
+
+/* ================= Bandas ================= */
+.band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem;
+}
+
+.band1 {
+  background: color-mix(in srgb, var(--foreground) 3%, var(--bg));
+}
+
+.band2 {
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+}
+
+.band3 {
+  background: var(--accent);
+}
+
+.inner {
+  width: 100%;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.innerNarrow {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================= Presentación ================= */
+.introBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.kicker {
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.name {
+  font-size: clamp(44px, 10vw, 84px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin: 0;
+  text-align: center;
+  color: var(--text);
+}
+
+/* ================= Párrafos ================= */
+.paragraph {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(21px, 3.2vw, 28px);
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.paragraphOnAccent {
+  color: var(--accent-text);
+}
+
+/* ================= Camino recorrido ================= */
+.kickerOnAccent {
+  color: color-mix(in srgb, var(--accent-text) 75%, transparent);
+}
+
+.sectionTitle {
+  font-size: clamp(26px, 5vw, 34px);
+  font-weight: 300;
+  margin: 0.5rem 0 2.4rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.band3 .sectionTitle {
+  color: var(--accent-text);
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.4rem;
+  align-items: baseline;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  padding-left: 1.4rem;
+}
+
+.timelineYear {
+  font-size: clamp(18px, 2.4vw, 22px);
+  font-weight: 600;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.timelineText {
+  font-size: clamp(17px, 2.2vw, 20px);
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* ================= Sello editorial ================= */
+.pressGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  width: 100%;
+  margin-top: 0.6rem;
+}
+
+.pressCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  gap: 0.8rem;
+}
+
+.pressCover {
+  width: min(13rem, 60vw);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pressCard:hover .pressCover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
+}
+
+.pressTitle {
+  font-size: clamp(18px, 2.3vw, 22px);
+  font-weight: 600;
+  margin: 0.2rem 0 0;
+  color: var(--text);
+  text-align: center;
+}
+
+.pressText {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0;
+  max-width: 21rem;
+  text-align: center;
+}
+
+.band3 .pressTitle {
+  color: var(--accent-text);
+}
+
+.band3 .pressText {
+  color: color-mix(in srgb, var(--accent-text) 82%, transparent);
+}
+
+/* ================= Reveal ================= */
+.band {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 640px) {
+  .band {
+    padding: 3.4rem 1.2rem;
+  }
+
+  .pressGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .band {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .pressCard:hover .pressCover {
+    transform: none;
+  }
+}

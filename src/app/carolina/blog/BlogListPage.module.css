@@ -1,0 +1,224 @@
+.page {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-bottom: 4rem;
+}
+
+.header {
+  text-align: center;
+  padding: 3rem 1rem 2.2rem;
+}
+
+.title {
+  font-size: clamp(34px, 7vw, 48px);
+  font-weight: 400;
+  margin: 0 0 0.6rem;
+  color: var(--text);
+}
+
+.subtitle {
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* ---------- Buscador ---------- */
+.searchBar {
+  padding: 0 1rem 2.2rem;
+}
+
+.searchInner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 34rem;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.25s ease;
+}
+
+.searchInner:focus-within {
+  border-color: var(--accent);
+}
+
+.searchIcon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.search {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  padding: 0.55em 0;
+  font-family: "EB Garamond", serif;
+  font-size: 1.02rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 0 1rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  display: block;
+  min-height: 68vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;
+  text-decoration: none;
+}
+
+.cardInactive {
+  opacity: 0.42;
+  filter: blur(2.5px) saturate(0.85);
+  transform: scale(0.985);
+}
+
+.cardActive {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+.card:hover {
+  transform: scale(1.004);
+}
+
+.cardBackground {
+  position: absolute;
+  inset: 0;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardGradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  opacity: 0.85;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 68vh;
+  padding: 1.6rem;
+}
+
+.cardTitle {
+  color: #fff;
+  background: color-mix(in srgb, #000 55%, transparent);
+  padding: 0.15em 0.45em;
+  border-radius: 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
+  align-self: flex-start;
+  font-size: clamp(22px, 4.5vw, 32px);
+  font-weight: 400;
+  text-align: left;
+  margin: 0 0 0.8rem;
+  max-width: 90%;
+}
+
+.cardExcerpt {
+  color: #fff;
+  background: color-mix(in srgb, #000 55%, transparent);
+  padding: 0.15em 0.45em;
+  border-radius: 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
+  align-self: flex-start;
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.6;
+  text-align: left;
+  margin: 0 0 1rem;
+  max-width: 95%;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cardPill {
+  color: #fff;
+  background: color-mix(in srgb, #000 55%, transparent);
+  padding: 0.12em 0.7em;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.cardDate {
+  color: #fff;
+  background: color-mix(in srgb, #000 55%, transparent);
+  padding: 0.12em 0.7em;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+}
+
+.cardReadingTime {
+  color: #fff;
+  background: color-mix(in srgb, #000 55%, transparent);
+  padding: 0.12em 0.7em;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 3rem 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardInactive {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card,
+  .cardContent {
+    min-height: 56vh;
+  }
+}

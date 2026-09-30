@@ -26,6 +26,7 @@ export default function ProjectExplorer({
   const filters: { id: Filter; label: string }[] = [
     { id: "all", label: copy.all },
     { id: "literatura", label: copy.literatura },
+    { id: "psicologia", label: copy.psicologia },
     { id: "tech", label: copy.tech },
   ];
 

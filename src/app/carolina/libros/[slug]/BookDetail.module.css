@@ -1,0 +1,85 @@
+.page {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.backLink {
+  display: inline-block;
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.25s ease;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.coverWrap {
+  flex-shrink: 0;
+}
+
+.cover {
+  width: min(17rem, 80vw);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  flex: 1 1 20rem;
+  max-width: 32rem;
+  text-align: left;
+}
+
+.title {
+  text-align: left;
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 400;
+  margin: 0 0 0.6rem;
+  line-height: 1.2;
+}
+
+.price {
+  text-align: left;
+  padding: 0;
+  font-size: clamp(20px, 2.6vw, 24px);
+  color: var(--accent);
+  margin: 0 0 1.2rem;
+}
+
+.description {
+  text-align: left;
+  padding: 0;
+  line-height: 1.85;
+  font-size: clamp(16px, 2vw, 18px);
+  margin: 0 0 2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.55em 1.6em;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: clamp(16px, 1.8vw, 18px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.missing {
+  text-align: center;
+  padding: 6rem 1rem;
+}
