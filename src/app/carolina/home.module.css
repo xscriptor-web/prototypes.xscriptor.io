@@ -1,0 +1,246 @@
+.home {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 4.5rem 0 3rem;
+}
+
+/* ================= Cabecera ================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.9rem;
+  padding: 2rem 1rem 4.5rem;
+}
+
+.kicker {
+  font-size: clamp(0.78rem, 1.4vw, 0.9rem);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  font-size: clamp(42px, 9vw, 72px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin: 0;
+  line-height: 1.1;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: clamp(17px, 2.2vw, 20px);
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 32rem;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+.ctaPrimary,
+.ctaGhost {
+  display: inline-block;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  padding: 0.5em 1.6em;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.ctaPrimary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.ctaPrimary:hover {
+  opacity: 0.88;
+}
+
+.ctaGhost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ================= Bandas de frases ================= */
+.quoteBand {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 4.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.quoteBand + .quoteBand {
+  border-top: none;
+}
+
+/* Fondo sólido neutro (tinte del fondo base) */
+.band1 {
+  background: color-mix(in srgb, var(--foreground) 3%, var(--bg));
+}
+
+/* Fondo sólido con tinte del acento */
+.band2 {
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+}
+
+/* Fondo sólido de acento */
+.band3 {
+  background: var(--accent);
+}
+
+.quote {
+  margin: 0;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  text-align: center;
+}
+
+.quoteText {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+  font-size: clamp(21px, 3.6vw, 28px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.quoteFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.quoteSource {
+  font-style: normal;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.quoteLink {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.quoteLink:hover {
+  color: var(--accent);
+}
+
+/* Variantes sobre banda de acento */
+.band3 .quoteText {
+  color: var(--accent-text);
+}
+
+.band3 .quoteSource {
+  color: color-mix(in srgb, var(--accent-text) 72%, transparent);
+}
+
+.band3 .quoteLink {
+  color: color-mix(in srgb, var(--accent-text) 85%, transparent);
+}
+
+.band3 .quoteLink:hover {
+  color: var(--accent-text);
+}
+
+/* ================= Cierre ================= */
+.closing {
+  margin-top: 0;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.closingTitle {
+  font-size: clamp(24px, 4.5vw, 30px);
+  font-weight: 300;
+  margin: 0;
+  color: var(--accent-text);
+}
+
+.closingNote {
+  font-size: clamp(15px, 1.8vw, 17px);
+  font-style: italic;
+  margin: 0;
+  padding: 0 1rem;
+  color: color-mix(in srgb, var(--accent-text) 82%, transparent);
+}
+
+.closing .ctaPrimary {
+  background: var(--accent-text);
+  border-color: var(--accent-text);
+  color: var(--accent);
+}
+
+.closing .ctaPrimary:hover {
+  opacity: 0.9;
+}
+
+.closing .ctaGhost {
+  border-color: color-mix(in srgb, var(--accent-text) 45%, transparent);
+  color: var(--accent-text);
+}
+
+.closing .ctaGhost:hover {
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+}
+
+/* ================= Reveal ================= */
+.hero,
+.quoteBand,
+.closing {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 640px) {
+  .home {
+    padding-top: 3rem;
+  }
+
+  .quoteBand {
+    padding: 3.2rem 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .quoteBand,
+  .closing {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

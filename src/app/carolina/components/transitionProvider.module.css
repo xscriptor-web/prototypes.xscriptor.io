@@ -1,0 +1,36 @@
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: var(--bg);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoMonogram {
+  font-family: "Great Vibes", "EB Garamond", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .logoMonogram {
+    font-size: 1.7rem;
+  }
+}
+
+.mark {
+  color: var(--accent);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain {
+    display: none;
+  }
+}

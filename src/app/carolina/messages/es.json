@@ -1,0 +1,171 @@
+{
+  "Layout": {
+    "skipToContent": "Saltar al contenido principal",
+    "siteName": "Poesía y Psicología"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "libros": "Libros",
+    "sobreMi": "Sobre mí",
+    "contacto": "Contacto",
+    "labelOpen": "Abrir menú",
+    "labelClose": "Cerrar menú",
+    "labelDark": "Cambiar a tema oscuro",
+    "labelLight": "Cambiar a tema claro",
+    "navLabel": "Navegación principal",
+    "menuLabel": "Menú",
+    "linkLabelPrefix": "Ir a"
+  },
+  "Footer": {
+    "copyright": "Poesía y Psicología",
+    "terms": "Términos y Condiciones",
+    "contacto": "Contacto",
+    "rights": "Todos los derechos reservados",
+    "dev": "Desarrollado por Xscriptor"
+  },
+  "HomePage": {
+    "discoverMore": "Entrar al blog",
+    "booksTitle": "Libros",
+    "tagline": "Un espacio de escritura, lectura y vida interior.",
+    "quotes": [
+      {
+        "text": "El amor que vale la pena es el que nos ayuda a respirar.",
+        "source": "La paz como punto de partida",
+        "href": "/carolina/blog/la-paz-como-punto-de-partida"
+      },
+      {
+        "text": "Lo delicado también puede ser poderoso, firme e influyente.",
+        "source": "La melodía que me habitaba",
+        "href": "/carolina/blog/my-melody-la-melodia-que-me-habitaba"
+      },
+      {
+        "text": "Crecer implica romperse un poco; los corazones frágiles pueden recomponerse.",
+        "source": "El prodigioso viaje de Edward Tulane",
+        "href": "/carolina/blog/el-prodigioso-viaje-de-edward-tulane"
+      },
+      {
+        "text": "El viaje no tiene destino final: un fluir entre lo que fuimos y lo que está por venir.",
+        "source": "Sobre el viaje interior",
+        "href": "/carolina/blog/reflexiones-poeticas-sobre-el-viaje-interior"
+      }
+    ],
+    "quoteLink": "Leer la reflexión",
+    "closingTitle": "Continúa leyendo y descubre tu naturaleza reflexiva",
+    "closingNote": "Nuevas entradas en el blog y correspondencia siempre abierta.",
+    "metadataTitle": "Poesía y Psicología — Carolina Massa",
+    "metadataDescription": "Portfolio literario de Carolina Massa: escritura, libros y vida interior."
+  },
+  "BlogPage": {
+    "metadataTitle": "Blog",
+    "metadataDescription": "Artículos sobre escritura, lecturas, vínculos y vida interior: reseñas, ensayos y notas del viaje interior.",
+    "title": "Blog",
+    "subtitle": "Artículos sobre escritura, lecturas, vínculos y vida interior.",
+    "searchPlaceholder": "Encontrar...",
+    "allCategories": "Todas",
+    "readingTime": "{minutes} min de lectura",
+    "backToBlog": "Volver a las entradas",
+    "publishedBy": "Escrito por {author}",
+    "noResults": "No se encontraron entradas para tu búsqueda.",
+    "emptyQuery": "Escribe algo para buscar entre las reflexiones."
+  },
+  "LibrosPage": {
+    "metadataTitle": "Libros",
+    "metadataDescription": "Dos libros publicados de Carolina Massa: Ambedo, Místico y Subliminal e Insondable Despertar.",
+    "title": "Libros",
+    "subtitle": "Versos reunidos en dos libros publicados.",
+    "buyCta": "Escribir para adquirirlo",
+    "backToList": "← Volver a libros",
+    "contactForPrice": "Precio: {price} €"
+  },
+  "Books": {
+    "ambedo": {
+      "title": "Ambedo, Místico y Subliminal",
+      "description": "Interrogantes existenciales, memoria y asombro reunidos en una sola obra.",
+      "longDescription": "Ambedo es esa sensación —melancólica y luminosa a la vez— de absorber el mundo que nos rodea, sin prisa, sin ruido. En estos poemas, lo místico y lo subliminal se entrelazan para explorar interrogantes existenciales: la memoria, el asombro, la ternura, el silencio. Una invitación a mirar lo cotidiano como si fuera la primera vez y a habitar, con calma, las preguntas que no exigen respuesta."
+    },
+    "insondable": {
+      "title": "Insondable Despertar",
+      "description": "Versos para atravesar los momentos oscuros y volver a la luz.",
+      "longDescription": "Hay despertares que no se explican: se sienten. Insondable Despertar reúne poemas inspiradores que atraviesan los momentos oscuros con la certeza de que la luz no se impone, se cultiva. Versos sobre el dolor, la esperanza y la reconstrucción interior, para quienes buscan palabras que acompañen el regreso a casa —ese hogar que cada uno lleva dentro."
+    }
+  },
+  "SobreMiPage": {
+    "metadataTitle": "Sobre mí — Carolina Massa",
+    "metadataDescription": "Carolina Massa: escritora, poeta y autora de Poesía y Psicología. Escritura creativa, psicología y espiritualidad.",
+    "bio1": "Escribo sobre lo que me habita: la memoria de las mujeres que me criaron, los libros que me escogieron, el cine que me confronta y la escritura como refugio y terapia.",
+    "bio2": "Para mí, la escritura no es un pasatiempo, sino una tabla de salvación. Cada texto nace de una pregunta honesta: ¿qué me sostiene? ¿qué me transforma? ¿cómo se nombra lo que duele hasta que deja de doler?",
+    "bio3": "Aquí reúno artículos, libros y recursos de escritura creativa, con la intención de que cada palabra pueda tocar a quien la lea.",
+    "timelineTitle": "Camino recorrido",
+    "timeline": [
+      {
+        "year": "2025",
+        "text": "Publica Ambedo, Místico y Subliminal e Insondable Despertar, sus dos primeros libros de poesía."
+      },
+      {
+        "year": "2025",
+        "text": "Estrena el blog Poesía y Psicología con artículos sobre psicología, escritura creativa, libros y cine."
+      },
+      {
+        "year": "2026",
+        "text": "Continúa publicando reflexiones semanales y explorando la escritura como herramienta de sanación."
+      }
+    ],
+    "pressTitle": "Sello editorial",
+    "role": "Psicóloga · Escritora · Autora"
+  },
+  "ContactPage": {
+    "metadataTitle": "Contacto",
+    "metadataDescription": "Contacta con Carolina Massa: correo electrónico, Instagram y redes sociales.",
+    "title": "Contacto",
+    "subtitle": "Escríbeme. Las palabras que se comparten regresan transformadas.",
+    "note": "Suelo responder en un plazo de dos o tres días.",
+    "channels": [
+      {
+        "label": "Correo electrónico",
+        "value": "autovigilantes@gmail.com",
+        "href": "mailto:autovigilantes@gmail.com"
+      },
+      {
+        "label": "Instagram",
+        "value": "@cagimass",
+        "href": "https://www.instagram.com/cagimass/",
+        "external": true
+      },
+      {
+        "label": "WhatsApp",
+        "value": "+34 000 000 000",
+        "href": "https://wa.me/34000000000",
+        "external": true
+      },
+      {
+        "label": "Telegram",
+        "value": "@carolinamassa",
+        "href": "https://t.me/carolinamassa",
+        "external": true
+      },
+      {
+        "label": "Boletín",
+        "value": "Suscribirse por correo",
+        "href": "mailto:autovigilantes@gmail.com?subject=Suscripci%C3%B3n%20al%20bolet%C3%ADn"
+      }
+    ]
+  },
+  "TermsPage": {
+    "metadataTitle": "Términos y Condiciones",
+    "metadataDescription": "Términos y condiciones del sitio Poesía y Psicología de Carolina Massa.",
+    "title": "Términos y Condiciones"
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Esta página se perdió entre las letras.",
+    "backHome": "Volver al inicio"
+  },
+  "Meta": {
+    "siteName": "Poesía y Psicología",
+    "defaultTitle": "Poesía y Psicología — Carolina Massa",
+    "defaultDescription": "Reflexiones poéticas y psicológicas que tocan el alma. Portfolio literario de Carolina Massa: poemas, libros y escritura creativa.",
+    "ogLocale": "es_ES",
+    "siteUrl": "https://poemasreflexiones.com"
+  }
+}

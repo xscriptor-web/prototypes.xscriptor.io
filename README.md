@@ -11,6 +11,7 @@ El sitio es una **exportación estática** (`output: "export"`) pensada para pub
 | `/` | Portada del catálogo: índice de todos los prototipos |
 | `/portfolios` | Categoría de portfolios personales (tarjetas) |
 | `/portfolios/pat-crespo` | **De poéticas** — portafolio literario de Patricia Crespo Alcalá |
+| `/carolina` | **Poesía y Psicología** — portafolio literario y psicológico de Carolina Massa |
 
 ### `/portfolios/pat-crespo`
 
@@ -24,6 +25,17 @@ Rediseño completo del sitio personal de la poeta y crítica literaria valencian
 Se conserva el look & feel del proyecto original (tipografías Playfair Display, Lora y Caveat; paleta verde bosque / marrón cuero; componentes y estilos Tailwind idénticos), ahora servido bajo el subdominio `prototypes.xscriptor.io`.
 
 El retrato de la autora y las portadas de sus libros se sirven en local desde `public/images/pat-crespo/` para no depender de servidores externos. Las imágenes del blog se cargan desde `blogger.googleusercontent.com` (el sitio original).
+
+### `/carolina`
+
+Rediseño del portafolio literario de Carolina Massa (**Poesía y Psicología**), etiquetado en el índice del hub con la categoría *Psicología*. Incluye:
+
+- Portada con frases destacadas y accesos al blog y a los libros
+- Blog con 9 artículos sobre psicología, escritura creativa, lecturas y vida interior (`/carolina/blog`)
+- Obras publicadas con ficha de cada libro (`/carolina/libros`)
+- Biografía (`/carolina/sobre-mi`), contacto (`/carolina/contacto`) y términos (`/carolina/terminos-y-condiciones`)
+
+Se conserva íntegro el diseño interno del sitio original (tipografías EB Garamond y Great Vibes, temas claro/oscuro con acento morado/dorado, transiciones con framer-motion, scroll suave con Lenis, desencriptado del texto de los artículos y las imágenes abstractas generadas para cada entrada). Todo el CSS del portafolio está acotado bajo la clase `.carolina-root` para no interferir con el lenguaje visual del hub, y las rutas internas se sirven prefijadas con `/carolina`.
 
 ## Estructura
 
@@ -41,6 +53,12 @@ src/
 │           ├── layout.tsx          # Header, Footer y transiciones del portafolio
 │           ├── page.tsx
 │           ├── bio/ blog/ contacto/ obras/
+│   └── carolina/                   # Sitio de Carolina Massa (Poesía y Psicología)
+│       ├── layout.tsx              # Layout anidado: proveedores y .carolina-root
+│       ├── carolina.css            # Tokens y estilos globales del portafolio (scoped)
+│       ├── page.tsx
+│       ├── blog/ contacto/ libros/ sobre-mi/ terminos-y-condiciones/
+│       ├── components/ lib/ content/ messages/
 ├── components/
 │   ├── hub/                        # HubShell, ProjectCard, ProjectTile
 │   └── pat-crespo/                 # Componentes del portafolio literario

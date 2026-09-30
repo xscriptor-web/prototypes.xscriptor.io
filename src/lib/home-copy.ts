@@ -15,6 +15,7 @@ export interface HomeCopy {
     filterLabel: string;
     all: string;
     literatura: string;
+    psicologia: string;
     tech: string;
     publishedSingular: string;
     publishedPlural: string;
@@ -53,6 +54,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
       filterLabel: "Filtrar por categoría",
       all: "Todos",
       literatura: "Literatura",
+      psicologia: "Psicología",
       tech: "Tech",
       publishedSingular: "publicado",
       publishedPlural: "publicados",
@@ -65,7 +67,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "Sobre la colección",
       first:
-        "El índice reúne dos tipos de trabajo. Por un lado, reconstrucciones de sitios reales, como el portfolio literario de Patricia Crespo. Por otro, herramientas propias de código abierto: los temas de Xscriptor Colors, la distribución X Linux y las utilidades de terminal xfetch y xtop.",
+        "El índice reúne dos tipos de trabajo. Por un lado, reconstrucciones de sitios reales, como los portfolios literarios de Patricia Crespo y Carolina Massa. Por otro, herramientas propias de código abierto: los temas de Xscriptor Colors, la distribución X Linux y las utilidades de terminal xfetch y xtop.",
       second:
         "Cada pieza es un ejercicio de diseño e ingeniería: explorar decisiones visuales, arquitectura de componentes y rendimiento, y mantener un historial público de trabajo en front-end.",
     },
@@ -93,6 +95,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
       filterLabel: "Filter by category",
       all: "All",
       literatura: "Literature",
+      psicologia: "Psychology",
       tech: "Tech",
       publishedSingular: "published",
       publishedPlural: "published",
@@ -105,7 +108,7 @@ export const homeCopy: Record<HomeLocale, HomeCopy> = {
     collection: {
       title: "About the collection",
       first:
-        "The index brings together two kinds of work: rebuilds of real sites, such as Patricia Crespo's literary portfolio, and open-source tools of my own, such as the Xscriptor Colors themes, the X Linux distribution and the xfetch and xtop terminal utilities.",
+        "The index brings together two kinds of work: rebuilds of real sites, such as the literary portfolios of Patricia Crespo and Carolina Massa, and open-source tools of my own, such as the Xscriptor Colors themes, the X Linux distribution and the xfetch and xtop terminal utilities.",
       second:
         "Each piece is a design and engineering exercise: exploring visual decisions, component architecture and performance, and keeping a public record of front-end work.",
     },
